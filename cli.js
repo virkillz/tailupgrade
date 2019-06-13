@@ -80,7 +80,7 @@ function convertHtml(path, filename) {
 			.replace(/light/g, '400')
 			.replace(/grey/g, 'gray')
 			.replace(/(gray|indigo|red|blue|yellow|primary|secondary|danger|success|warning|green|teal|pink|purple) /g, '$1-500 ')
-			.replace(/(gray|indigo|red|blue|yellow|primary|secondary|danger|success|warning|green|teal|pink|purple)"/g, '$1-500 ')
+			.replace(/(gray|indigo|red|blue|yellow|primary|secondary|danger|success|warning|green|teal|pink|purple)"/g, '$1-500"')
 			.replace(/list-reset/g, "")
 			.replace(/pin-none/g, "inset-auto")
 			.replace(/pin-y/g, "inset-y-0")
@@ -90,12 +90,12 @@ function convertHtml(path, filename) {
 			.replace(/pin-b/g, "bottom-0")
 			.replace(/pin-l/g, "left-0")
 			.replace(/pin /g, "inset-0")
-			.replace(/pin"/g, "inset-0")
+			.replace(/pin"/g, 'inset-0"')
 			.replace(/flex-no-grow/g, "flex-grow-0")
 			.replace(/flex-no-shrink/g, "flex-shrink-0")
 			.replace(/roman/g, "not-italic")
-			.replace(/max-w-md/g, "max-w-xl")
 			.replace(/max-w-xl/g, "max-w-6xl")
+			.replace(/max-w-md/g, "max-w-xl")			
 			.replace(/max-w-lg/g, "max-w-4xl");
 
 			let dir = pathlib.resolve(path, "../") + "/output"
