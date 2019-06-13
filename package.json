@@ -1,0 +1,16 @@
+{
+  "name": "tailupgrade",
+  "version": "0.1.0",
+  "description": "tailupgrade will convert class name in .html files from version 0.7.* to be compatible with 1.0.4.",
+  "main": "tailupgrade",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Tailwind",
+    "css",
+    "converter"
+  ],
+  "author": "virkill",
+  "license": "MIT"
+}
