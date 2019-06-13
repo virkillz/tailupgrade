@@ -41,8 +41,14 @@ if (process.argv.length <= 2) {
 var path = process.argv[2];
 console.log("Scanning: " + path + " for .html files");
 
-fs.readdir(path, function (err, items) {
+if (!fs.existsSync(path)) {
+	console.log("The given path " + path + " did not exist");
+	process.exit(-1);
+}
 
+
+fs.readdir(path, function (err, items) {
+	console.log("path adalah " + path)
 	for (var i = 0; i < items.length; i++) {
 		if (getExtention(items[i]) == "html") {
 			console.log("Working on " + items[i]);
@@ -58,8 +64,9 @@ function getExtention(filename) {
 
 function convertHtml(path, filename) {
 	var result = "";
-	fs.readFile(path + filename, 'utf8', function (err, data) {
+	fs.readFile(path + "/" + filename, 'utf8', function (err, data) {
 		if (err) {
+			console.log("Cannot read the file.");
 			return console.log(err);
 		}
 		// You can evaluate the replacement rule here just in case we miss something. Feel free to make PR.
