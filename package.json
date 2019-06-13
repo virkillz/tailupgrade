@@ -1,6 +1,6 @@
 {
   "name": "tailupgrade",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "tailupgrade will convert class name in .html files from version 0.7.* to be compatible with 1.0.4.",
   "main": "tailupgrade",
   "repository": "https://github.com/virkillz/tailupgrade.git",
